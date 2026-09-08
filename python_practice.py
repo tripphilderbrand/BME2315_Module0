@@ -11,7 +11,7 @@ Pythontutorial.net was used for understanding of the numpy library and the numpy
 # %% ###########################################################
 # Problem 1: Practice writing pseudocode
 
-# Write pseudocode that will input a integer N and output the sum of the first N numbers in the fibonacci sequence.
+# Write pseudocode that will input a integer N and output the sum of the first N numbers in the fibonacci sequence
 # Fibonacci sequence starts: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
 # Example: If N = 5, the output should be 0 + 1 + 1 + 2 + 3 = 7
 

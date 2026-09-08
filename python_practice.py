@@ -2,6 +2,12 @@
 # As discussed in class, feel free to use AI tools to help you complete this assignment, but remember to cite them.
 # I encourage you to try the problems yourself first and only use AI tools when you are stuck to benefit your learning. 
 
+'''
+Sources used to complete this assignment include pythontutorial.net for basic syntax reivew, as well as Google Gemini 3.1 pro
+to assist with syntax review & understanding. Gemini 3.1 pro also assisted in understanding for what a fibionacci sequence is.
+Pythontutorial.net was used for understanding of the numpy library and the numpy.std function for finding the standard deviation of numbers in a list
+'''
+
 # %% ###########################################################
 # Problem 1: Practice writing pseudocode
 
@@ -51,7 +57,7 @@ print(total) # print the final sum of the first N fibonacci numbers
 
 import numpy
 n = 10 # establishes the number of fibonacci numbers to use
-fib_sequence = [] # creates an empty list to hold the fibonacci numbers
+fib_sequence = [] # empty list to hold the fibonacci numbers
 num1 = 0 # set num1 to the first fibonacci number
 num2 = 1 # set num2 to the second fibionacci number
 for i in range (n): # loop n times
@@ -126,21 +132,23 @@ print("The index of the first number above your limit is: ", result)
 # The following function will run but will output the wrong answer sometimes. Add test cases to verify that the function works correctly for a variety of inputs. If you find any inputs that produce incorrect outputs, fix the function. The function, when working properly, should return the sum of all odd Fibonacci numbers less than or equal to the input "limit".
 
 
-def sum_even_fib(limit):
+def sum_odd_fib(limit): # function renamed from sum_even_fib to sum_odd_fib to reflect what it is now doing (summing odd instead of even)
     a, b = 0, 1
     total = 0
     while b <= limit:
-        if b % 2 == 0:  # This line checks if the Fibonacci number is even
+        if b % 2 != 0:  # This line was changed from checking if a number is even to if it is odd
             total += b
         a, b = b, a + b
     return total 
 
-print(sum_even_fib(10)) 
+print(sum_odd_fib(10)) 
 
 # Add your test cases here
 
-print("when limit = 5, expecting 10. Got:", sum_even_fib(5))
-print("when limit = 10, expecting 20. Got:", sum_even_fib(10))
-print("when limit = 21, expecting 44. Got:", sum_even_fib(21))
+# initially got 2,10,10 respectively before fixing the bug in the code
+
+print("when limit = 5, expecting 10. Got:", sum_odd_fib(5))
+print("when limit = 10, expecting 10. Got:", sum_odd_fib(10))
+print("when limit = 21, expecting 44. Got:", sum_odd_fib(21))
 
 # %%
